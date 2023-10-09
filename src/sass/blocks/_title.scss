@@ -1,0 +1,48 @@
+.title {
+   color: #1D1515;
+   font-family: Poppins;
+   font-style: normal;
+   line-height: normal;
+   &_fz14 {
+      font-size: 14px;
+      font-weight: 700;
+   }
+   &_fz16 {
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+   }
+   &_fz20 {
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+   }
+   &_fz36 {
+      color: #000;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1.66;
+   }
+   &_fz48 {
+      font-size: 52px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1.33;
+   }
+}
+.section {
+   &__title {
+      text-align: center;
+      position: relative;
+      @include befor_circle;
+      &:before {
+         position: absolute;
+         top: -2px;
+         left: 50%;
+         transform: translateX(-50%);
+      }
+   }
+   &__subtitle {
+      text-align: center;
+   }
+}

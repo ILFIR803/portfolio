@@ -1,0 +1,107 @@
+.experience {
+   padding-top: 120px;
+   .divider {
+      margin-top: 25px;
+      margin-bottom: 60px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+   }
+
+   &__wrapper {
+      padding: 0 65px;
+      display: grid;
+      grid-template-columns: repeat(2, 425px);
+      column-gap: 140px;
+   }
+
+   &__column {
+      padding-left: 43px;
+      &-title {
+         position: relative;
+         padding-bottom: 40px;
+
+         &:before {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-radius: 100%;
+            background-color: $main-color;
+            top: 7px;
+            left: -43px;
+         }
+      }
+
+      ul {
+         li {
+            list-style-type: none;
+
+         }
+      }
+   }
+
+   &__item {
+      position: relative;
+      padding-bottom: 40px;
+
+      &:before {
+         content: '';
+         width: 1px;
+         height: calc(100% + 16px);
+         position: absolute;
+         left: -36px;
+         top: -61px;
+         background-color: black;
+      }
+
+      &-head {
+         position: relative;
+         padding-left: 56px;
+
+         h4 {
+            margin-bottom: 0;
+         }
+      }
+
+      &-icon {
+         position: absolute;
+         left: 20px;
+         top: 10px;
+         @include befor_circle;
+
+         &:before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: -12px;
+         }
+
+         img {
+            position: absolute;
+            top: 2px;
+         }
+
+         &:after {
+            content: '';
+            position: absolute;
+            width: 35px;
+            height: 1px;
+            background-color: black;
+            top: 5px;
+            left: -55px;
+
+         }
+      }
+
+      &-location {
+         font-size: 12px;
+      }
+
+      &-body {
+         margin-top: 12px;
+         font-size: 12px;
+      }
+   }
+
+}

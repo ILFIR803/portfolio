@@ -1,0 +1,41 @@
+.promo {
+   min-height: 100vh;
+   background: url('/img/bg/bg_gal.jpg') no-repeat 50%/cover;
+   position: relative;
+   padding-top: 205px;
+   &__subtitle {
+      position: relative;
+      @include befor_circle;
+      padding-left: 10px;
+      z-index: 2;
+   }
+   &__title {
+      margin-top: 10px;
+      width: 500px;
+   }
+   &__btns {
+      width: 280px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+   }
+   .btn {
+      background-color: #c8c3bf;
+   }
+   &__link {
+      margin-top: 14px;
+      height: 45px;
+      padding: 12px 25px;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);   
+      color: #000000;
+      font-size: 14px;
+      font-weight: 700;
+      &:hover {
+         text-decoration: none;
+         color: #000000;
+         background-color: #b3b3b3;
+      }
+   }
+   
+}

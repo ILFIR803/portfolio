@@ -1,0 +1,96 @@
+.menu {
+   width: 100%;
+   z-index: 10;
+   position: fixed;
+   visibility: hidden;
+      left: -100%;
+   top: 0;
+   transition: all 0.5s;
+   &.active {
+      visibility: visible;
+      left: 0;
+      opacity: 1;
+   }
+   &__block {
+      position: relative;
+      width: 20%;
+      height: 100vh;
+      padding-top: 150px;
+      padding-left: 40px;
+      background-color: $main-color;
+      transition: all 0.5s;
+      z-index: 10;
+   }
+   &__overlay {
+      position: fixed;
+      top: 0;
+      left: 0; 
+      height: 100vh;
+      width: 100%;
+      background-color: rgb(255, 255, 255);
+      opacity: 0.75;
+   }
+   nav {
+      height: 100%;
+   }
+
+   &__list {
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-bottom: 15px;
+      height: 60%;
+      position: relative;
+      padding-left: 20px;
+
+   }
+
+   &__link {
+      position: relative;
+      cursor: pointer;
+      list-style-type: none;
+      margin-bottom: 15px;
+      &:before {
+         content: '';
+         position: absolute;
+         top: 9px;
+         left: -35px;
+         width: 15px;
+         height: 15px;
+         border-radius: 100%;
+         border: 1px solid #000;
+         transition: all 0.5s;
+      }
+      &:hover {        
+         &:before {
+            background-color: #ffffff;
+         }         
+      }
+      a {
+         &:hover {
+            text-decoration: none;
+         }
+         color: #FFF;
+      }
+   }
+   &__close {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      cursor: pointer;
+   }
+   &__social {
+      width: 90px;
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      img {
+         width: 25px;
+         transform: rotate(+90deg);
+      }
+   }
+}
