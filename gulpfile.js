@@ -6,6 +6,17 @@ const autoprefixer = require('gulp-autoprefixer');
 const rename = require("gulp-rename");
 const imagemin = require('gulp-imagemin');
 const htmlmin = require('gulp-htmlmin');
+const {src, task}= require('gulp');
+const ghPages = require('gulp-gh-pages');
+const deploy = require("gulp-gh-pages");
+var options = { 
+    remoteUrl: "https://github.com/ILFIR803/portfolio.git",
+    branch: "main"};
+gulp.task('deploy', function () {
+    gulp.src("dist/**/*.*")
+        .pipe(deploy(options));
+});
+task('deploy', () => src('./dist/**/*').pipe(ghPages()));
 
 gulp.task('server', function() {
 
